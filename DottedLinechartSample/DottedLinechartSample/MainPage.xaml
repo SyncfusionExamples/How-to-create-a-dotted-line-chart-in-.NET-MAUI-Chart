@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:DottedLinechartSample"
+             x:Class="DottedLinechartSample.MainPage">
+
+    <chart:SfCartesianChart x:Name="chart" >
+
+        <chart:SfCartesianChart.BindingContext>
+            <local:ViewModel></local:ViewModel>
+        </chart:SfCartesianChart.BindingContext>
+
+        <chart:SfCartesianChart.XAxes>
+            <chart:CategoryAxis></chart:CategoryAxis>
+        </chart:SfCartesianChart.XAxes>
+
+        <chart:SfCartesianChart.YAxes>
+            <chart:NumericalAxis EdgeLabelsDrawingMode="Shift" Minimum="0">
+                <chart:NumericalAxis.LabelStyle>
+                    <chart:ChartAxisLabelStyle LabelFormat="0B"></chart:ChartAxisLabelStyle>
+                </chart:NumericalAxis.LabelStyle>
+            </chart:NumericalAxis>
+        </chart:SfCartesianChart.YAxes>
+
+        <chart:SfCartesianChart.Legend>
+            <chart:ChartLegend></chart:ChartLegend>
+        </chart:SfCartesianChart.Legend>
+
+        <chart:SfCartesianChart.Series>
+            <chart:LineSeries ShowDataLabels="True" Label="Projected Revenue" StrokeWidth="2" Fill="#512BD4" ItemsSource="{Binding Data}" 
+                        XBindingPath="Year" YBindingPath="Revenue">
+                <chart:LineSeries.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings>
+                        <chart:CartesianDataLabelSettings.LabelStyle>
+                            <chart:ChartDataLabelStyle FontSize="10" LabelFormat="0B"></chart:ChartDataLabelStyle>
+                        </chart:CartesianDataLabelSettings.LabelStyle>
+                    </chart:CartesianDataLabelSettings>
+                </chart:LineSeries.DataLabelSettings>
+
+                <chart:LineSeries.StrokeDashArray>
+                    <DoubleCollection>
+                        <x:Double>2</x:Double>
+                        <x:Double>2</x:Double>
+                    </DoubleCollection>
+                </chart:LineSeries.StrokeDashArray>
+
+            </chart:LineSeries>
+        </chart:SfCartesianChart.Series>
+
+    </chart:SfCartesianChart>
+</ContentPage>
