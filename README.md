@@ -94,7 +94,7 @@ lineSeries.DataLabelSettings = dataLabelSettings;
 Content = chart;
 ```
 
-**[Output]**
+**Dotted line chart**
 
 <img width="709" alt="maui_charts_dotted_line_chart" src="https://user-images.githubusercontent.com/105496256/203955482-909a997c-a799-4efb-8e78-0e57d2dbcb5f.PNG">
 
