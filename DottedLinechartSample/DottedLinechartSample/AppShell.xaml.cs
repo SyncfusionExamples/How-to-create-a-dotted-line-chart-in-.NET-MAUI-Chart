@@ -1,9 +1,10 @@
-﻿namespace DottedLinechartSample;
-
-public partial class AppShell : Shell
+﻿namespace DottedLinechartSample
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }
